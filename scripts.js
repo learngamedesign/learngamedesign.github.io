@@ -28,9 +28,18 @@ $(function() {
         $('a#pycom').attr("href", ref)
         $('a#pycom').attr("target", "_blank")
         
-        $.get(ref, function(response) {
+        /*$.get(ref, function(response) {
                 $('#pop-up').html($(response).filter('#synopsis').html().split('<br>')[0]);
-            });
+            });*/
+
+        $.ajax({
+            async: false,
+            type: 'GET',
+            url: ref,
+            success: function(response) {
+                $('#pop-up').html($(response).filter('#synopsis').html().split('<br>')[0]);
+            }
+        });
         
         $('#pop-up').show().css('top', e.pageY + moveDown).css('left', e.width);
         }, function() {
