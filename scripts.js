@@ -3,7 +3,9 @@ $(function() {
     var moveLeft = -10;
     var moveDown = 20;
         
-    var pyside = 'content/pyside-docs/PySide/QtGui/';
+    /*var pyside = 'content/pyside-docs/PySide/QtGui/';*/
+    var pyside = 'https://srinikom.github.io/pyside-docs/PySide/QtGui/';
+    
     var maya_python = 'content/docs/maya/CommandsPython/';
     
         
