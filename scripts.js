@@ -5,7 +5,7 @@ $(function() {
         
     /*var pyside = 'content/pyside-docs/PySide/QtGui/';*/
     var pyside = 'https://srinikom.github.io/pyside-docs/PySide/QtGui/';
-    
+
     var maya_python = 'http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands/';
     
         
@@ -23,15 +23,17 @@ $(function() {
                 });
             
     $('a#pycom').hover(function(e) {
-        var a_href = $(this).attr('href').split('#');
+        //var a_href = $(this).attr('href').split('#');
+        var ref = maya_python + $(this).contents().text() + '.html';
         
-        $.get(a_href[0], function(response) {
+        $.get(ref, function(response) {
                 $('#pop-up').html($(response).filter('#synopsis').html().split('<br>')[0]);
             });
         
-        $('div#pop-up').show().css('top', e.pageY + moveDown).css('left', e.width);
+        $('#pop-up').show().css('top', e.pageY + moveDown).css('left', e.width);
         }, function() {
-        $('div#pop-up').hide();
+            $('#pop-up').hide();
+            
     });
 });
 -->
