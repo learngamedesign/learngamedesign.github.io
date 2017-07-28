@@ -1,9 +1,27 @@
+/* latin */
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cabin'), local('Cabin-Regular'), url(https://fonts.gstatic.com/s/cabin/v11/yQOMOX5hR0-6LTD879t-PQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 html {
     background-color: #e6e9e9;
     background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
     background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
     -webkit-font-smoothing: antialiased;
 }
+
+body {
+    font-family: Cabin;
+    font-size: 16px;
+    line-height: 1.5em;
+
+}
+
+
 
 #none {
     display:none;
@@ -43,12 +61,6 @@ table.tableizer-table {
     
 }
 
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    
-}
 
 #mainBody{
                 position: absolute;
@@ -147,16 +159,6 @@ div#pop-up {
     margin: 0px;
 }
 
-@font-face {
-    font-family: "GeoSlb712 Md BT";
-    src: url(file:///content\fonts\GSS55_0.otf) format("truetype");
-}
-
-@font-face {
-    font-family: "Neutraface Display Bold";
-    src: url(file:///content\fonts\Neutra2Display-Bold_1.otf) format("truetype");
-}
-
 table {
     border-collapse: collapse;}
 .border {
@@ -193,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2em;
-    font-family: "Neutraface Display Bold";
+    /* font-family: "Neutraface Display Bold"; */
 }
 
 h2, h3, h4, h5, h6 {
