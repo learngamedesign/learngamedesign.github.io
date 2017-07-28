@@ -6,7 +6,7 @@ $(function() {
     /*var pyside = 'content/pyside-docs/PySide/QtGui/';*/
     var pyside = 'https://srinikom.github.io/pyside-docs/PySide/QtGui/';
 
-    var maya_python = 'http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands/';
+    var maya_python = 'https://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands/';
     
         
     $('#pyside').hover(function(e) {
