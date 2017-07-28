@@ -25,6 +25,8 @@ $(function() {
     $('a#pycom').hover(function(e) {
         //var a_href = $(this).attr('href').split('#');
         var ref = maya_python + $(this).contents().text() + '.html';
+        $('a#pycom').attr("href", ref)
+        $('a#pycom').attr("target", "_blank")
         
         $.get(ref, function(response) {
                 $('#pop-up').html($(response).filter('#synopsis').html().split('<br>')[0]);
