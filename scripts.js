@@ -23,7 +23,7 @@ $(function() {
     $('a#pycom').hover(function(e) {
         var a_href = $(this).attr('href').split('#');
         
-        $.get(maya_python + a_href[0], function(response) {
+        $.get(a_href[0], function(response) {
                 $('#pop-up').html($(response).filter('#synopsis').html().split('<br>')[0]);
             });
         
