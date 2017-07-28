@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -9,6 +10,8 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
 
@@ -22,6 +25,31 @@ $(document).ready(function(){
 <video width="800" preload autoplay loop>
     <source src="content/webm/2015-07-16_09-37-32.webm" type="video/mp4">
 </video>
+
+<div id="code">
+<pre>
+<span class="s0">import </span><span class="s1">maya.OpenMayaUI </span><span class="s0">as </span><span class="s1">omui 
+ 
+</span><span class="s0">from </span><span class="s1">PySide </span><span class="s0">import </span><span class="s1">QtGui 
+</span><span class="s0">from </span><span class="s1">PySide </span><span class="s0">import </span><span class="s1">QtCore 
+ 
+</span><span class="s0">from </span><span class="s1">shiboken </span><span class="s0">import </span><span class="s1">wrapInstance 
+</span><span class="s0">def </span><span class="s1">main_window(): 
+    main_window_ptr = omui.MQtUtil.mainWindow() 
+    </span><span class="s0">return </span><span class="s1">wrapInstance(long(main_window_ptr), QtGui.QWidget)</span>
+<span class="s0">class </span><span class="s1">MyWindow(QtGui.<a id="pyside">QDockWidget</a>): 
+    </span><span class="s0">def </span><span class="s1">__init__(self, parent=main_window()): 
+        super(MyWindow, self).__init__(parent)</span>
+        <span class="s0">
+        self.setWindowTitle('Mighty Tool Dock')
+        self.setFloating(True)        </span>
+    <span id="here2" class="where"></span>
+<nav id="here" class="where"></nav>
+<span class="s0">ui = MyWindow() 
+ui.show()</span>
+</pre>
+
+    </div>
 
 </body>
 </html>
